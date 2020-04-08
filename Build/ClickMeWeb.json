@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "ClickMeWeb.data.unityweb",
+"asmCodeUrl": "ClickMeWeb.asm.code.unityweb",
+"asmMemoryUrl": "ClickMeWeb.asm.memory.unityweb",
+"asmFrameworkUrl": "ClickMeWeb.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
