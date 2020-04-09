@@ -33,11 +33,15 @@ public class GameMaster : MonoBehaviour
         alpha = 0;
         alphaProducers = 0;
         betaProducers = 0;
+        gammaProducers = 0;
+        deltaProducers = 0;
         alphaPerSecond = alphaProducers;
         alphaClickValue = 1;
         clickUpgradeCost = 10;
         productionUpgradeCost = 25;
         betaUpgradeCost = 1000;
+        gammaUpgradeCost = 40000;
+        deltaUpgradeCost = 160000;
         omega = 0;
     }
     public void Update()
@@ -47,11 +51,11 @@ public class GameMaster : MonoBehaviour
         clickUpgradeText.text = "Click Better\n" + clickUpgradeCost.ToString("F0") + " alpha";
         productionUpgradeText.text = alphaProducers.ToString("F0") + " Alpha Creators\n" + productionUpgradeCost.ToString("F0") + " alpha";
         betaUpgradeText.text = betaProducers.ToString("F0") + " Beta Creators\n" + betaUpgradeCost.ToString("F0") + " alpha";
-        gammaUpgradeText.text = gammaProducers.ToString("F0") + " Gamma Creators\n" + betaUpgradeCost.ToString("F0") + " alpha";
-        deltaUpgradeText.text = deltaProducers.ToString("F0") + " Delta Creators\n" + betaUpgradeCost.ToString("F0") + " alpha";
+        gammaUpgradeText.text = gammaProducers.ToString("F0") + " Gamma Creators\n" + gammaUpgradeCost.ToString("F0") + " alpha";
+        deltaUpgradeText.text = deltaProducers.ToString("F0") + " Delta Creators\n" + deltaUpgradeCost.ToString("F0") + " alpha";
         omegaText.text = "Omega: " + omega.ToString("F0") + "\n+0% click power";
 
-        alpha += alphaPerSecond + alphaProducers * Time.deltaTime;
+        alpha += alphaProducers * Time.deltaTime;
         alphaProducers += betaProducers * Time.deltaTime;
         betaProducers += gammaProducers * Time.deltaTime;
         gammaProducers += deltaProducers * Time.deltaTime;
